@@ -2,12 +2,12 @@ var mysql = require('mysql');
 
 const conn = mysql.createConnection({
     host : 'localhost',
-    username : 'root',
+    user : 'root',
     password : '',
     database : 'cobanode'
 })
 
-conn.connect(()=>{
+conn.connect((err)=>{
     if(err) throw err;
     console.log('Mysql Terkoneksi');
 })
